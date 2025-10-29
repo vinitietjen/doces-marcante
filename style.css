@@ -1,0 +1,327 @@
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;700&display=swap');
+
+/* --- CSS Variables (Paleta de Cores) --- */
+:root {
+    --primary-color: #FADADD;
+    --secondary-color: #634133;
+    --base-color: #FFFBF8;
+    --text-color: #333333;
+    --white: #FFFFFF;
+}
+
+/* --- Reset e Estilos Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2 {
+    font-family: 'Great Vibes', cursive;
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+/* --- Header e Navegação --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--base-color);
+    border-bottom: 1px solid var(--primary-color);
+    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+header .logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav a {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Seção Hero --- */
+    #inicio {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 2rem;
+      /* ADICIONA A IMAGEM E UM LEVE ESCURECIMENTO */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Macaron 2.png');
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+    }
+#inicio .hero-content {
+      background-color: transparent; /* Remove o fundo marrom */
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    #inicio h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem; /* Um pouco menor para melhor estética */
+      color: var(--white);
+      margin-bottom: 2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      line-height: 1.2; /* Adiciona espaçamento entre as linhas */
+    }
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cta-buttons a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.button-primary:hover {
+    background-color: #f8c8d0;
+    transform: translateY(-3px);
+}
+
+.button-secondary {
+    background-color: transparent;
+    border: 2px solid var(--white); /* Borda branca para maior destaque */
+    color: var(--white); /* Texto branco para maior destaque */
+}
+
+.button-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* --- Seção Encomendas --- */
+#encomendas {
+    text-align: center;
+}
+
+#encomendas p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.button-whatsapp {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-whatsapp:hover {
+    background-color: #f8c8d0;
+    transform: translateY(-3px);
+}
+
+/* --- Galeria de Fotos --- */
+#nosso-espaco .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+#nosso-espaco .gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* --- Seção Visite --- */
+#visite {
+    text-align: center;
+}
+
+#visite p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+#map-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+}
+
+/* --- Feed do Instagram --- */
+#instagram-feed {
+    text-align: center;
+}
+
+/* Substitui a regra antiga do grid */
+.instagram-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna no celular */
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.instagram-post {
+    position: relative; /* Essencial para posicionar os ícones */
+    display: block;
+    overflow: hidden; /* Garante que o zoom do hover não saia da caixa */
+    border-radius: 8px; /* Cantos arredondados como o concorrente */
+}
+
+.instagram-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Efeito de zoom */
+}
+
+/* O efeito de zoom "mexida" que você pediu */
+.instagram-post:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilo base para os ícones */
+.instagram-post i {
+    position: absolute;
+    color: white;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para legibilidade */
+    pointer-events: none; /* Para não atrapalhar o clique no link */
+}
+
+/* Ícone do Instagram (canto inferior esquerdo) */
+.icon-instagram {
+    bottom: 10px;
+    left: 10px;
+}
+
+/* Ícone de Tipo (Vídeo/Galeria) (canto superior direito) */
+.icon-type {
+    top: 10px;
+    right: 10px;
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--base-color);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.footer-content .social-links {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-content .social-links a {
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-content .social-links a:hover {
+    color: var(--primary-color);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* --- Media Queries para Responsividade (Desktop) --- */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #nosso-espaco .gallery-grid {
+        grid-template-columns: repeat(4, 1fr); /* Mantém 4 colunas */
+        max-width: 1200px; /* <--- NOVA PROPRIEDADE: Define a largura máxima */
+        margin: 0 auto; /* <--- NOVA PROPRIEDADE: Centraliza o grid */
+        gap: 1.5rem; /* Aumenta um pouco o espaçamento entre as imagens */
+    }
+
+    .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px; /* Alinha com a galeria de fotos */
+        margin: 0 auto; /* Centraliza */
+    }
+}
