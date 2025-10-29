@@ -104,13 +104,13 @@ header .logo-img {
 
 /* --- Seção Hero --- */
 #inicio {
-    min-height: 85vh;
+    min-height: 70vh; /* MUDANÇA: Mais estreito (era 75vh) */
     display: flex;
     justify-content: center;
     text-align: center;
     
-    margin-top: 0; /* REMOVE o margin-top negativo */
-    padding-top: 100px; /* Espaço para o logo "pendurado" */
+    margin-top: 0;
+    padding-top: 120px; /* MUDANÇA: Mais afastado do logo (era 100px) */
     
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Macarons.jpg');
     background-size: cover;
@@ -211,11 +211,36 @@ header .logo-img {
 /* --- Seção Visite --- */
 #visite {
     text-align: center;
+    
+    /* 1. Opacidade aumentada (mantém 0.8) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/Morango do Amor.jpg');
+    background-attachment: fixed;
+    
+    /* 2. MUDANÇA: Voltando para 'cover' para parar a repetição */
+    background-size: cover;
+    /* Linha 'background-repeat: no-repeat;' REMOVIDA */
+    
+    background-position: center;
+    padding: 4rem 2rem;
+    border-top: 3px solid var(--primary-color);
+}
+
+/* Força o texto da seção 'Visite' a ficar branco */
+#visite h2 {
+    color: var(--white) !important; /* Força a cor branca */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para legibilidade */
 }
 
 #visite p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    color: var(--white) !important; /* Força a cor branca */
+    opacity: 0.9;
+}
+
+#visite .map-container {
+    /* 3. A SOMBRA PRETA SUAVE */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    
+    border-radius: 8px; /* Mantém o arredondamento */
 }
 
 #map-placeholder {
@@ -278,30 +303,7 @@ header .logo-img {
     right: 10px;
 }
 
-/* --- Rodapé (Footer) --- */
-footer {
-    background-color: var(--secondary-color);
-    color: var(--base-color);
-    text-align: center;
-    padding: 3rem 2rem;
-}
 
-.footer-content .social-links {
-    margin: 1.5rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.footer-content .social-links a {
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.footer-content .social-links a:hover {
-    color: var(--primary-color);
-}
 
 .copyright {
     font-size: 0.9rem;
@@ -334,5 +336,107 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         max-width: 1200px; /* Alinha com a galeria de fotos */
         margin: 0 auto; /* Centraliza */
+    }
+}
+
+/* --- Estilos do Novo Rodapé (Estilo Eloport) --- */
+footer {
+    background-color: var(--primary-color); /* Fundo MARROM ESCURO */
+    color: var(--base-color); /* Texto BRANCO */
+    padding: 4rem 2rem 2rem 2rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna no celular */
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.footer-column {
+    text-align: center; /* Centralizado no celular */
+}
+
+.footer-logo-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: var(--white);
+    margin: 0 auto 1rem auto;
+    font-weight: 500;
+}
+
+#footer-info p {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.footer-social-icons {
+    display: flex;
+    justify-content: center; /* Centraliza ícones no celular */
+    gap: 1.5rem;
+}
+
+.footer-social-icons a {
+    font-size: 1.8rem;
+    color: var(--white); /* Ícones em ROSA */
+    transition: transform 0.3s;
+}
+
+.footer-social-icons a:hover {
+    transform: scale(1.1) translateY(-3px);
+}
+
+#footer-links h4 {
+    color: var(--white); /* Título "Links Úteis" em ROSA */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+#footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+#footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+#footer-links a {
+    color: var(--base-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#footer-links a:hover {
+    color: var(--secondary-color);
+}
+
+.copyright-footer {
+    text-align: center;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+}
+
+/* --- Media Query para Desktop --- */
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr; /* 2 colunas no desktop */
+        text-align: left; /* Alinha à esquerda no desktop */
+    }
+    .footer-column {
+        text-align: left;
+    }
+    .footer-logo {
+        margin: 0 0 1rem 0; /* Alinha logo à esquerda */
+    }
+    .footer-social-icons {
+        justify-content: flex-start; /* Alinha ícones à esquerda */
     }
 }
