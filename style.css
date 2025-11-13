@@ -386,7 +386,6 @@ header .logo-img {
     
     /* 1. Opacidade aumentada (mantém 0.8) */
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/Morango do Amor.jpg');
-    background-attachment: fixed;
     
     /* 2. MUDANÇA: Voltando para 'cover' para parar a repetição */
     background-size: cover;
@@ -551,6 +550,20 @@ header .logo-img {
     .feedback-carousel .feedback-card {
         flex: 0 0 80%; /* Cada card ocupa 80% da largura da tela */
         scroll-snap-align: start; /* Alinha o card no início ao "travar" */
+    }
+}
+
+/* --- Responsividade para o Botão Flutuante do WhatsApp --- */
+@media (max-width: 768px) {
+    #floating-whatsapp-button {
+        width: 55px;
+        height: 55px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    #floating-whatsapp-button img {
+        width: 30px;
     }
 }
 
