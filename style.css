@@ -197,6 +197,14 @@ header .logo-img {
     transform: translateY(-3px);
 }
 
+/* --- Responsividade para o Botão de Orçamento --- */
+@media (max-width: 768px) {
+    .button-whatsapp {
+        padding: 1rem 1.5rem; /* Reduz o padding horizontal */
+        font-size: 0.9rem;    /* Reduz um pouco a fonte */
+    }
+}
+
 /* --- Seção Promo Natal --- */
 #natal-promo {
     padding: 4rem 2rem;
