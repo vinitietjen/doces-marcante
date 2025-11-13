@@ -349,6 +349,32 @@ header .logo-img {
     width: 100%; /* Garante que a imagem seja responsiva dentro do max-width */
 }
 
+/* --- Botão Flutuante do WhatsApp --- */
+#floating-whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366; /* Cor oficial do WhatsApp */
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+#floating-whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+#floating-whatsapp-button img {
+    width: 35px; /* Ajusta o tamanho do ícone dentro do círculo */
+    height: auto;
+}
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
