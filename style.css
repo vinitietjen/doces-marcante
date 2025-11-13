@@ -84,13 +84,13 @@ header .logo-link {
     
     /* O "encaixe" */
     position: relative;
-    top: 15px; /* "Pendura" o logo 15px para baixo do topo */
+    top: 15px; /* "Pendura" o logo 25px para baixo do topo */
     
     /* O "tamanho" */
     width: 120px; /* Tamanho do círculo */
     height: 120px; /* Tamanho do círculo */
     
-    padding: 15px; /* Espaço DENTRO do círculo */
+    padding: 5px; /* Espaço DENTRO do círculo */
     
     /* Limpa estilos antigos */
     margin-top: 0;
@@ -138,16 +138,13 @@ header .logo-img {
     gap: 1rem;
 }
 
-.cta-buttons a {
+.button-primary {
     display: inline-block;
     padding: 1rem 2rem;
     border-radius: 50px;
     font-weight: 700;
     text-transform: uppercase;
     transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.button-primary {
     background-color: var(--primary-color);
     color: var(--white);
 }
@@ -158,6 +155,12 @@ header .logo-img {
 }
 
 .button-secondary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     background-color: transparent;
     border: 2px solid var(--white); /* Borda branca para maior destaque */
     color: var(--white); /* Texto branco para maior destaque */
@@ -194,11 +197,134 @@ header .logo-img {
     transform: translateY(-3px);
 }
 
-/* --- Galeria de Fotos --- */
+/* --- Seção Promo Natal --- */
+#natal-promo {
+    padding: 4rem 2rem;
+    overflow: visible; /* Permite que a imagem "vaze" para cima */
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.promo-text {
+    text-align: left;
+}
+
+.promo-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.promo-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.promo-text p {
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.promo-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    margin-top: -50px;
+}
+
+/* Responsividade para a seção de Natal */
+@media (max-width: 768px) {
+    .promo-grid {
+        grid-template-columns: 1fr; /* Coluna única */
+        text-align: center;
+    }
+
+    .promo-text {
+        text-align: center;
+    }
+
+    .promo-title, .promo-subtitle {
+        text-align: center;
+    }
+
+    .promo-image img {
+        margin-top: 2rem; /* Remove a margem negativa e adiciona um espaço */
+    }
+}
+
+/* --- Seção Nossas Especialidades (Tabs) --- */
+#nosso-espaco {
+    text-align: center;
+}
+
+.tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.tab-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #888;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    position: relative;
+    top: 1px; /* Alinha com a borda da nav */
+}
+
+.tab-button:hover {
+    color: var(--secondary-color);
+}
+
+.tab-button.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.tab-pane {
+    display: none; /* Esconde todas as abas por padrão */
+    text-align: center;
+    animation: fadeIn 0.5s;
+}
+
+.tab-pane.active {
+    display: block; /* Mostra apenas a aba ativa */
+}
+
+.tab-pane p {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+}
+
+/* Reutiliza o estilo da galeria, mas garante que está dentro da seção */
 #nosso-espaco .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #nosso-espaco .gallery-grid img {
@@ -206,6 +332,26 @@ header .logo-img {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+}
+
+/* Centraliza as 3 imagens do Cantinho */
+#nosso-espaco .cantinho-gallery-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens quebrem a linha em telas menores */
+    justify-content: center; /* Centraliza as imagens */
+    gap: 1.5rem; /* Mantém o espaçamento */
+    max-width: 900px; /* Limita a largura para que não se espalhem demais */
+    margin: 0 auto; /* Centraliza o container flex */
+}
+
+#nosso-espaco .cantinho-gallery-grid img {
+    max-width: 300px; /* Limita o tamanho individual da imagem */
+    width: 100%; /* Garante que a imagem seja responsiva dentro do max-width */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* --- Seção Visite --- */
@@ -303,7 +449,84 @@ header .logo-img {
     right: 10px;
 }
 
+/* --- Seção de Feedbacks --- */
+#feedback-section {
+    background-color: var(--primary-color);
+    padding: 4rem 2rem;
+}
 
+.feedback-carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto 0 auto;
+}
+
+.feedback-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.feedback-card-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+.feedback-card-author h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+#feedback-section h2 {
+    color: var(--white);
+}
+
+.feedback-stars {
+    color: var(--primary-color); /* Rosa para as estrelas */
+}
+
+.feedback-card-body p {
+    font-style: italic;
+    color: #555;
+}
+
+/* Responsividade para o Carrossel de Feedbacks */
+@media (max-width: 992px) {
+    .feedback-carousel {
+        grid-template-columns: 1fr 1fr; /* 2 colunas em tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .feedback-carousel {
+        display: flex; /* Muda para flexbox */
+        overflow-x: auto; /* Habilita o scroll horizontal */
+        scroll-snap-type: x mandatory; /* Efeito de "trava" no scroll */
+        padding-bottom: 1.5rem; /* Espaço para a barra de scroll */
+        -webkit-overflow-scrolling: touch; /* Melhora a experiência em iOS */
+    }
+
+    .feedback-carousel .feedback-card {
+        flex: 0 0 80%; /* Cada card ocupa 80% da largura da tela */
+        scroll-snap-align: start; /* Alinha o card no início ao "travar" */
+    }
+}
 
 .copyright {
     font-size: 0.9rem;
@@ -422,6 +645,51 @@ footer {
     font-size: 0.9rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 2rem;
+}
+
+/* --- Seção Sobre Nós --- */
+#sobre-nos {
+    text-align: center;
+    background-color: var(--base-color); /* Um fundo suave */
+}
+
+#sobre-nos .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#sobre-nos .about-img {
+    width: 100%;
+    max-width: 300px; /* Limita o tamanho da imagem */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#sobre-nos .about-text {
+    text-align: left;
+    color: var(--text-color);
+}
+
+#sobre-nos .about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* Media Query para desktop */
+@media (min-width: 768px) {
+    #sobre-nos .about-content {
+        flex-direction: row; /* Lado a lado no desktop */
+        text-align: left;
+    }
+
+    #sobre-nos .about-img {
+        max-width: 400px; /* Aumenta um pouco a imagem no desktop */
+    }
 }
 
 /* --- Media Query para Desktop --- */
