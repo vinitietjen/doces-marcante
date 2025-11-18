@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encomendas Personalizadas - Doces Marcante</title>
+    <link rel="icon" type="image/png" href="images/Logo Redonda.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Image Comparison Slider -->
+    <link rel="stylesheet" href="https://unpkg.com/image-comparison-slider@8/dist/style.css" />
+    <script defer src="https://unpkg.com/image-comparison-slider@8/dist/index.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="images/Logo Redonda.png" alt="Logo Doces Marcante" class="logo-img">
+        </a>
+    </header>
+
+    <main>
+        <!-- SEÇÃO 1: HERO -->
+        <section id="encomendas-hero">
+            <div class="encomendas-hero-grid">
+                <div class="hero-text-content">
+                    <h1 class="hero-title-script">Sua festa é única.</h1>
+                    <h2 class="hero-subtitle-sans">SEUS DOCES TAMBÉM DEVERIAM SER.</h2>
+                    <p>Transformamos seu tema em uma experiência de arte. Da paleta de cores ao sabor, garantimos um resultado artesanal que irá impressionar seus convidados e marcar seu momento.</p>
+                    <a href="#form-encomendas" class="button-primary">Solicite um Orçamento ➔</a>
+                </div>
+                <div class="hero-image-content">
+                    <img src="images/Festa.jpg" alt="Mesa de festa decorada com doces personalizados">
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: INSPIRAÇÃO VS RESULTADO -->
+        <section id="encomendas-prova">
+            <h2>Você sonha com o tema. Nós o tornamos real.</h2>
+            <p class="subtitle">Não importa a inspiração. Nossa especialidade é mergulhar no seu universo e transformar qualquer tema em uma experiência de sabor e design.</p>
+            <div class="slider-container">
+                <!-- Exemplo Super Mario -->
+                <div class="slider-item">
+                    <h4>Inspiração: Super Mario</h4>
+                    <image-comparison-slider class="themed-slider">
+                        <img slot="first" src="images/01.jpg" alt="Inspiração Super Mario">
+                        <img slot="second" src="images/Docinhos.jpg" alt="Resultado Doces Super Mario">
+                    </image-comparison-slider>
+                </div>
+
+                <!-- 
+                Estrutura para futuros sliders:
+                Copie e cole o bloco .slider-item abaixo para adicionar mais temas.
+                
+                <div class="slider-item">
+                    <h4>Inspiração: Pequena Sereia</h4>
+                    <image-comparison-slider class="themed-slider">
+                        <img slot="first" src="images/02.jpg" alt="Inspiração Pequena Sereia">
+                        <img slot="second" src="images/Macarons.jpg" alt="Resultado Doces Pequena Sereia">
+                    </image-comparison-slider>
+                </div>
+
+                <div class="slider-item">
+                    <h4>Inspiração: Lilo & Stitch</h4>
+                    <image-comparison-slider class="themed-slider">
+                        <img slot="first" src="images/04.jpg" alt="Inspiração Lilo & Stitch">
+                        <img slot="second" src="images/Brownie.jpg" alt="Resultado Doces Lilo & Stitch">
+                    </image-comparison-slider>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: PARA TODAS AS OCASIÕES -->
+        <section id="encomendas-ocasioes">
+            <h2>Do Chá de Bebê ao Grande Casamento.</h2>
+            <div class="ocasioes-grid">
+                <div class="ocasiao-card">
+                    <img src="images/Festa 2.jpg" alt="Placeholder para Festas Intimistas">
+                    <h3>Aniversários e Celebrações</h3>
+                    <p>Para festas infantis, chás de bebê ou um aniversário em casa. Criamos doces personalizados que encantam as crianças e impressionam os adultos, transformando uma "festinha" em um evento mágico e cheio de personalidade.</p>
+                </div>
+                <div class="ocasiao-card">
+                    <img src="images/Festa.jpg" alt="Placeholder para Grandes Eventos">
+                    <h3>Casamentos e 15 Anos</h3>
+                    <p>Para o dia mais importante da sua vida, a perfeição é o único padrão. Desenvolvemos mesas de doces luxuosas, 100% alinhadas à identidade visual do seu evento, que se tornam o centro das atenções da sua festa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 4: O DIFERENCIAL -->
+        <section id="encomendas-diferencial">
+            <div class="diferencial-content">
+                <img src="images/Sobre Nós.jpg" alt="Patrícia, Fundadora da Doces Marcante" class="diferencial-img">
+                <div class="diferencial-text">
+                    <h2>O Toque Artesanal que a Indústria Não Pode Copiar.</h2>
+                    <p>Diferente de produções em massa, aqui cada pedido é um projeto de arte. Eu sou a Patrícia, fundadora e artesã por trás de cada doce. Eu pessoalmente supervisiono a paleta de cores, a modelagem e o acabamento. Não usamos atalhos, apenas os melhores ingredientes e um compromisso absoluto com o *seu* resultado.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 5: COMO FUNCIONA -->
+        <section id="encomendas-passos">
+            <h2>Transformar sua ideia em realidade é simples:</h2>
+            <div class="passos-grid">
+                <div class="passo-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Passo 1: A Consultoria</h3>
+                    <p>Você nos envia suas inspirações, paleta de cores e o tema da festa. Entendemos sua visão.</p>
+                </div>
+                <div class="passo-card">
+                    <i class="fas fa-pencil-ruler"></i>
+                    <h3>Passo 2: O Desenho</h3>
+                    <p>Nossa equipe desenha uma proposta exclusiva para você aprovar, garantindo que cada detalhe esteja perfeito.</p>
+                </div>
+                <div class="passo-card">
+                    <i class="fas fa-magic"></i>
+                    <h3>Passo 3: A Magia</h3>
+                    <p>Produzimos artesanalmente e entregamos no dia, prontos para encantar e marcar seu momento.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 6: FEEDBACK DESTAQUE -->
+        <section id="encomendas-feedback-destaque">
+            <blockquote>
+                "Eu não poderia ter sonhado com doces mais perfeitos para o meu casamento. A Patrícia entendeu o tema na hora e o resultado foi surreal. Todos os convidados elogiaram."
+            </blockquote>
+            <cite>— Maria C., Casamento 2025</cite>
+        </section>
+
+        <!-- SEÇÃO 7: FORMULÁRIO -->
+        <section id="form-encomendas">
+            <h2>Pronto para criar uma festa inesquecível?</h2>
+            <p class="subtitle">Não importa o tamanho do seu sonho, estamos prontos para realizá-lo. Envie sua ideia e vamos começar a planejar.</p>
+            <form action="https://formsubmit.co/docesmarcantedesucesso@gmail.com,vinitietjen@gmail.com,souzasandro19701@gmail.com" method="POST" class="encomendas-form">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="Nome" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp">WhatsApp:</label>
+                    <input type="tel" id="whatsapp" name="WhatsApp" placeholder="Seu WhatsApp (com DDD)" required>
+                </div>
+                <div class="form-group">
+                    <label for="data-evento">Data do Evento:</label>
+                    <input type="date" id="data-evento" name="Data do Evento" required>
+                </div>
+                <div class="form-group">
+                    <label for="convidados">Número de Convidados (Aprox.):</label>
+                    <input type="number" id="convidados" name="Numero de Convidados" placeholder="Nº de convidados (aprox.)" min="1">
+                </div>
+                <div class="form-group form-group-full">
+                    <label for="tema">Conte-nos sobre seu tema e o que você precisa:</label>
+                    <textarea id="tema" name="Tema da Festa" placeholder="Conte-nos sobre seu tema e o que você precisa..." rows="5"></textarea>
+                </div>
+                <input type="hidden" name="_next" value="https://docesmarcante.com/obrigado">
+                <input type="hidden" name="_subject" value="[Site Doces Marcante] Nova Encomenda para Festa!">
+                <div class="form-group-full">
+                    <button type="submit" class="button-primary">SOLICITAR ORÇAMENTO AGORA</button>
+                </div>
+            </form>
+            <div class="whatsapp-link">
+                <p>Prefere uma conversa mais ágil? <a href="https://wa.me/5567981361097" target="_blank">Clique aqui e chame direto no WhatsApp.</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column" id="footer-info">
+                <h3 class="footer-logo-text">Doces Marcante</h3>
+                <p>Sabor que transforma momentos.</p>
+                <div class="footer-social-icons">
+                    <a href="https://wa.me/5567981361097" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/docesmarcante_sfs/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.ifood.com.br/delivery/sao-francisco-do-sul-sc/doces-marcantes-rocio-grande/ec41c4da-69ff-44c2-b1d6-b71b411a4559?utm_medium=share" target="_blank" title="iFood"><i class="fas fa-motorcycle"></i></a>
+                </div>
+            </div>
+            <div class="footer-column" id="footer-links">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="index.html#inicio">Início</a></li>
+                    <li><a href="index.html#festa-marcante">Encomendas</a></li>
+                    <li><a href="index.html#nosso-espaco">Nosso Espaço</a></li>
+                    <li><a href="index.html#visite">Visite</a></li>
+                    <li><a href="index.html#instagram-feed">Novidades</a></li>
+                </ul>
+            </div>
+            <div class="footer-column" id="footer-contact">
+                <h4>Contato & Horários</h4>
+                <p>
+                    (67) 98136-1097 (WhatsApp)<br><br>
+                    <strong>Horário de Funcionamento:</strong><br>
+                    Segunda - Sábado: 11h às 19h<br>
+                    Domingo: Fechado
+                </p>
+            </div>
+        </div>
+        <div class="copyright-footer">
+            <p>Av. Nereu Ramos, 350 - Rocio Grande, São Francisco do Sul - SC</p>
+            <p class="copyright">Copyright 2025 - Doces Marcante</p>
+        </div>
+    </footer>
+</body>
+</html>
