@@ -1,0 +1,493 @@
+/* --- Página de Encomendas --- */
+
+/* Seção 1: Hero (Refatorado) */
+#encomendas-hero {
+    background-color: var(--base-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem;
+    min-height: auto;
+}
+
+.encomendas-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero-text-content {
+    text-align: center;
+}
+
+.hero-title-script {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.hero-subtitle-sans {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.hero-text-content p {
+    margin-bottom: 2rem;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.hero-image-content img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção 2: Prova (Slider Gallery) */
+section#encomendas-prova {
+    text-align: center;
+    background-color: #FDF8F9;
+}
+
+#encomendas-prova .subtitle {
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+}
+
+/* Seção 3: Ocasiões */
+#encomendas-ocasioes {
+    background-color: var(--base-color);
+    text-align: center;
+}
+
+.ocasioes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ocasiao-card {
+    text-align: center;
+}
+
+.ocasiao-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.ocasiao-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Seção 4: Diferencial */
+section#encomendas-diferencial {
+    background-color: #FDF8F9;
+}
+
+.diferencial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.diferencial-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.diferencial-text h2 {
+    text-align: center;
+}
+
+/* Seção 5: Passos */
+#encomendas-passos {
+    background-color: var(--base-color);
+    text-align: center;
+}
+
+.passos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+}
+
+.passo-card {
+    text-align: center;
+}
+
+.passo-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.passo-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Seção 6: Feedback Destaque */
+section#encomendas-feedback-destaque {
+    background-color: #FDF8F9;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+#encomendas-feedback-destaque blockquote {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    font-style: italic;
+    color: var(--secondary-color);
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    line-height: 1.4;
+}
+
+#encomendas-feedback-destaque cite {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+/* Seção 7: Formulário */
+#form-encomendas {
+    text-align: center;
+    background-color: var(--base-color);
+}
+
+#form-encomendas .subtitle {
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+.encomendas-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.form-group-full {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.whatsapp-link {
+    margin-top: 2rem;
+}
+
+.whatsapp-link a {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* =========================================
+   SLIDER NATIVO (HTML/CSS/JS)
+   ========================================= */
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    cursor: col-resize;
+}
+
+.slider-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Impede que as imagens interfiram com os eventos do mouse */
+}
+
+.image-clipper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Posição inicial */
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Posição inicial */
+    width: 4px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; /* O handle em si não é arrastável, o container é */
+}
+
+.handle-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #333;
+}
+
+.handle-circle svg {
+    width: 18px;
+    height: 18px;
+}
+
+.slider-label {
+    position: absolute;
+    top: 0;
+    background-color: #E31B22; /* Vermelho */
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 4;
+    border-radius: 0 0 5px 5px;
+    user-select: none;
+}
+
+.label-first {
+    left: 20px;
+}
+
+.label-second {
+    right: 20px;
+}
+
+/* =========================================
+   GALERIA DE MINIATURAS
+   ========================================= */
+
+.thumbnail-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem auto 0;
+    max-width: 700px;
+    flex-wrap: wrap;
+}
+
+.thumbnail-item {
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.thumbnail-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+.thumbnail-item span {
+    display: block;
+    padding: 0.5rem;
+    background-color: #f1f1f1;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #555;
+}
+
+.thumbnail-item:hover {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.thumbnail-item.active {
+    opacity: 1;
+    border-color: #E31B22; /* Vermelho */
+    box-shadow: 0 4px 15px rgba(227, 27, 34, 0.3);
+}
+
+/* =========================================
+   GALERIA DE DETALHES (MASONRY)
+   ========================================= */
+
+#encomendas-galeria {
+    background-color: var(--base-color);
+    text-align: center;
+}
+
+#encomendas-galeria .subtitle {
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+/* Desktop: Layout Masonry */
+.masonry-gallery {
+    column-count: 3;
+    column-gap: 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.masonry-item {
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
+}
+
+.masonry-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.masonry-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* =========================================
+   MEDIA QUERIES RESPONSIVAS
+   ========================================= */
+
+/* Layouts para Desktop (Telas > 768px) */
+@media (min-width: 768px) {
+    .encomendas-hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+    .hero-text-content {
+        text-align: left;
+    }
+
+    .ocasioes-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+    }
+
+    .diferencial-content {
+        flex-direction: row;
+        text-align: left;
+        gap: 4rem;
+    }
+
+    .diferencial-text h2 {
+        text-align: left;
+    }
+
+    .passos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .encomendas-form {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Galeria Masonry - Tablet (Telas < 992px) */
+@media (max-width: 992px) {
+    .masonry-gallery {
+        column-count: 2;
+    }
+}
+
+/* Galeria Masonry - Mobile (Telas < 768px) */
+@media (max-width: 768px) {
+    .masonry-gallery {
+        /* Override do Masonry para Carrossel */
+        column-count: auto;
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding: 0.5rem 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .masonry-item {
+        break-inside: auto;
+        margin-bottom: 0;
+        flex: 0 0 85%;
+        max-width: 320px;
+        scroll-snap-align: center;
+        margin-right: 1rem;
+    }
+
+    .masonry-item:last-child {
+        margin-right: 0;
+    }
+}

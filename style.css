@@ -29,6 +29,11 @@ body {
     line-height: 1.6;
 }
 
+/* PREVENÇÃO DE BARRA HORIZONTAL (AOS) */
+html, body {
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -38,7 +43,8 @@ ul {
     list-style: none;
 }
 
-img {
+/* Aplica a todas as imagens, EXCETO as que estão dentro do slider */
+img:not(image-comparison-slider *) {
     max-width: 100%;
     display: block;
 }
@@ -144,7 +150,7 @@ header .logo-img {
     border-radius: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color: 0.3s ease, transform 0.3s ease;
     background-color: var(--primary-color);
     color: var(--white);
     border: none; /* Remove borda padrão do botão */
@@ -162,7 +168,7 @@ header .logo-img {
     border-radius: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color: 0.3s ease, transform 0.3s ease;
     background-color: transparent;
     border: 2px solid var(--white); /* Borda branca para maior destaque */
     color: var(--white); /* Texto branco para maior destaque */
@@ -191,7 +197,7 @@ header .logo-img {
     border-radius: 50px;
     font-weight: 700;
     text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color: 0.3s ease, transform 0.3s ease;
 }
 
 .button-whatsapp:hover {
@@ -831,371 +837,5 @@ footer {
 
     .festa-image img {
         margin-top: 2rem; /* Remove a margem negativa e adiciona um espaço */
-    }
-}
-
-/* --- Página de Encomendas --- */
-
-/* Seção 1: Hero (Refatorado) */
-#encomendas-hero {
-    background-color: var(--base-color);
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    padding: 6rem 2rem;
-    min-height: auto;
-}
-
-.encomendas-hero-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    gap: 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.hero-text-content {
-    text-align: center;
-}
-
-.hero-title-script {
-    font-family: 'Great Vibes', cursive;
-    font-size: 4rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
-.hero-subtitle-sans {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.hero-text-content p {
-    margin-bottom: 2rem;
-    color: #555;
-    font-size: 1.1rem;
-}
-
-.hero-image-content img {
-    width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* Seção 2: Prova (Slider Gallery) */
-section#encomendas-prova {
-    text-align: center;
-    background-color: #FDF8F9;
-}
-
-#encomendas-prova .subtitle {
-    max-width: 700px;
-    margin: 0 auto 3rem auto;
-}
-
-.comparison-gallery {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.main-slider-wrapper {
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-#main-comparison-slider {
-    width: 100%;
-    height: 500px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    --divider-width: 2px;
-    --divider-color: var(--primary-color);
-    --handle-color: var(--primary-color);
-}
-
-image-comparison-slider img {
-    display: initial; /* Reseta o display para corrigir o empilhamento */
-}
-
-.slider-label {
-    position: absolute;
-    top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border-radius: 4px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    pointer-events: none;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-}
-
-.label-first {
-    left: 1rem;
-}
-
-.label-second {
-    right: 1rem;
-}
-
-.thumbnail-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
-
-.thumbnail-item {
-    border: 3px solid transparent;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
-    position: relative;
-}
-
-.thumbnail-item img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    display: block;
-}
-
-.thumbnail-item span {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 0.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-align: center;
-}
-
-.thumbnail-item:hover {
-    border-color: #ddd;
-}
-
-.thumbnail-item.active {
-    border-color: var(--primary-color);
-}
-
-/* Seção 3: Ocasiões */
-#encomendas-ocasioes {
-    background-color: var(--base-color);
-    text-align: center;
-}
-
-.ocasioes-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.ocasiao-card {
-    text-align: center;
-}
-
-.ocasiao-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-}
-
-.ocasiao-card h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-}
-
-/* Seção 4: Diferencial */
-section#encomendas-diferencial {
-    background-color: #FDF8F9;
-}
-
-.diferencial-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.diferencial-img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.diferencial-text h2 {
-    text-align: center;
-}
-
-/* Seção 5: Passos */
-#encomendas-passos {
-    background-color: var(--base-color);
-    text-align: center;
-}
-
-.passos-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 2rem auto 0;
-}
-
-.passo-card {
-    text-align: center;
-}
-
-.passo-card i {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.passo-card h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-/* Seção 6: Feedback Destaque */
-section#encomendas-feedback-destaque {
-    background-color: #FDF8F9;
-    padding: 5rem 2rem;
-    text-align: center;
-}
-
-#encomendas-feedback-destaque blockquote {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
-    font-style: italic;
-    color: var(--secondary-color);
-    max-width: 800px;
-    margin: 0 auto 1.5rem auto;
-    line-height: 1.4;
-}
-
-#encomendas-feedback-destaque cite {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: var(--primary-color);
-    font-style: normal;
-    font-size: 1.1rem;
-}
-
-/* Seção 7: Formulário */
-#form-encomendas {
-    text-align: center;
-    background-color: var(--base-color);
-}
-
-#form-encomendas .subtitle {
-    max-width: 600px;
-    margin: 0 auto 3rem auto;
-}
-
-.encomendas-form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-}
-
-.form-group-full {
-    grid-column: 1 / -1;
-    text-align: center;
-}
-
-.whatsapp-link {
-    margin-top: 2rem;
-}
-
-.whatsapp-link a {
-    color: var(--primary-color);
-    font-weight: 700;
-    text-decoration: underline;
-}
-
-/* Media Queries para Encomendas */
-@media (min-width: 768px) {
-    .encomendas-hero-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-    }
-    .hero-text-content {
-        text-align: left;
-    }
-    .thumbnail-gallery {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .ocasioes-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: start;
-    }
-
-    .diferencial-content {
-        flex-direction: row;
-        text-align: left;
-        gap: 4rem;
-    }
-
-    .diferencial-text h2 {
-        text-align: left;
-    }
-
-    .passos-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .encomendas-form {
-        grid-template-columns: 1fr 1fr;
     }
 }
