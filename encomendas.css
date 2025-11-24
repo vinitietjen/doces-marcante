@@ -2,11 +2,11 @@
 
 /* Seção 1: Hero (Refatorado) */
 #encomendas-hero {
-    background-color: var(--base-color);
+    background-color: var(--light-pink); /* Tom de rosa muito claro e suave */
     color: var(--text-color);
     display: flex;
     align-items: center;
-    padding: 6rem 2rem;
+    padding: 8rem 2rem;
     min-height: auto;
 }
 
@@ -25,26 +25,29 @@
 
 .hero-title-script {
     font-family: 'Great Vibes', cursive;
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: var(--secondary-color);
     margin-bottom: 0.5rem;
     text-align: center;
+    line-height: 1.2;
 }
 
 .hero-subtitle-sans {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--secondary-color); /* Marrom escuro para contraste */
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 1.5rem;
     text-align: center;
+    letter-spacing: 1.5px;
 }
 
 .hero-text-content p {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem; /* Mais espaço antes do botão */
     color: #555;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    line-height: 1.7;
 }
 
 .hero-image-content img {
@@ -56,7 +59,9 @@
 /* Seção 2: Prova (Slider Gallery) */
 section#encomendas-prova {
     text-align: center;
-    background-color: #FDF8F9;
+    background-color: var(--base-color);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 #encomendas-prova .subtitle {
@@ -66,7 +71,7 @@ section#encomendas-prova {
 
 /* Seção 3: Ocasiões */
 #encomendas-ocasioes {
-    background-color: var(--base-color);
+    background-color: var(--light-pink);
     text-align: center;
 }
 
@@ -100,7 +105,8 @@ section#encomendas-prova {
 
 /* Seção 4: Diferencial */
 section#encomendas-diferencial {
-    background-color: #FDF8F9;
+    background-color: var(--base-color);
+    padding: 6rem 2rem;
 }
 
 .diferencial-content {
@@ -119,10 +125,14 @@ section#encomendas-diferencial {
     height: auto;
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid var(--base-color);
+    outline: 3px solid var(--primary-color);
 }
 
 .diferencial-text h2 {
     text-align: center;
+    font-size: 3rem; /* Ajuste para nova hierarquia */
+    margin-bottom: 1.5rem;
 }
 
 /* Seção 5: Passos */
@@ -157,7 +167,7 @@ section#encomendas-diferencial {
 
 /* Seção 6: Feedback Destaque */
 section#encomendas-feedback-destaque {
-    background-color: #FDF8F9;
+    background-color: var(--light-pink);
     padding: 5rem 2rem;
     text-align: center;
 }
@@ -184,17 +194,20 @@ section#encomendas-feedback-destaque {
 #form-encomendas {
     text-align: center;
     background-color: var(--base-color);
+    border-top: 5px solid var(--light-pink);
+    padding-top: 6rem;
 }
 
 #form-encomendas .subtitle {
     max-width: 600px;
     margin: 0 auto 3rem auto;
+    line-height: 1.7;
 }
 
 .encomendas-form {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem; /* Aumenta o espaçamento */
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
@@ -208,21 +221,37 @@ section#encomendas-feedback-destaque {
 .form-group label {
     font-weight: 700;
     margin-bottom: 0.5rem;
+    color: var(--secondary-color);
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 1rem; /* Aumenta o padding interno */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Bordas mais arredondadas */
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(227, 27, 117, 0.2);
 }
 
 .form-group-full {
     grid-column: 1 / -1;
     text-align: center;
+}
+
+#form-encomendas .button-primary {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
 }
 
 .whatsapp-link {
@@ -306,8 +335,8 @@ section#encomendas-feedback-destaque {
 .slider-label {
     position: absolute;
     top: 0;
-    background-color: #E31B22; /* Vermelho */
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white);
     padding: 6px 14px;
     font-size: 0.8rem;
     font-weight: bold;
@@ -372,7 +401,7 @@ section#encomendas-feedback-destaque {
 
 .thumbnail-item.active {
     opacity: 1;
-    border-color: #E31B22; /* Vermelho */
+    border-color: var(--primary-color);
     box-shadow: 0 4px 15px rgba(227, 27, 34, 0.3);
 }
 
@@ -381,7 +410,7 @@ section#encomendas-feedback-destaque {
    ========================================= */
 
 #encomendas-galeria {
-    background-color: var(--base-color);
+    background-color: var(--light-pink);
     text-align: center;
 }
 
@@ -418,6 +447,30 @@ section#encomendas-feedback-destaque {
 }
 
 /* =========================================
+   ESTILOS DE BOTÃO ESPECÍFICOS
+   ========================================= */
+
+#encomendas-hero .button-primary {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#encomendas-hero .button-primary:hover {
+    background-color: #c91769; /* Um tom de rosa um pouco mais escuro */
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* =========================================
    MEDIA QUERIES RESPONSIVAS
    ========================================= */
 
@@ -432,8 +485,8 @@ section#encomendas-feedback-destaque {
     }
 
     .ocasioes-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
         align-items: start;
     }
 
