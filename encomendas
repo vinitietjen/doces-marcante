@@ -163,7 +163,7 @@
         <section id="form-encomendas" data-aos="fade-up">
             <h2 data-aos="fade-up">Vamos criar algo incrível juntos?</h2>
             <p class="subtitle" data-aos="fade-up" data-aos-delay="100">Preencha o formulário abaixo com os detalhes da sua festa. Em breve, entraremos em contato para transformar sua visão em realidade. Quanto mais detalhes você nos der, mais rápido podemos criar uma proposta dos seus sonhos!</p>
-            <form action="https://formsubmit.co/docesmarcantedesucesso@gmail.com,vinitietjen@gmail.com,souzasandro19701@gmail.com" method="POST" class="encomendas-form">
+            <form action="https://formsubmit.co/docesmarcantedesucesso@gmail.com" method="POST" class="encomendas-form">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="Nome" placeholder="Seu nome" required>
@@ -184,6 +184,7 @@
                     <label for="tema">Conte-nos sobre seu tema e o que você precisa:</label>
                     <textarea id="tema" name="Tema da Festa" placeholder="Conte-nos sobre seu tema e o que você precisa..." rows="5"></textarea>
                 </div>
+                <input type="hidden" name="_cc" value="vinitietjen@gmail.com,souzasandro19701@gmail.com">
                 <input type="hidden" name="_next" value="https://docesmarcante.com/obrigado">
                 <input type="hidden" name="_subject" value="[Site Doces Marcante] Nova Encomenda para Festa!">
                 <div class="form-group-full">
@@ -212,7 +213,7 @@
                 <h4>Links Úteis</h4>
                 <ul>
                     <li><a href="index.html#inicio">Início</a></li>
-                    <li><a href="index.html#festa-marcante">Encomendas</a></li>
+                    <li><a href="encomendas">Encomendas</a></li>
                     <li><a href="index.html#nosso-espaco">Nosso Espaço</a></li>
                     <li><a href="index.html#visite">Visite</a></li>
                     <li><a href="index.html#instagram-feed">Novidades</a></li>
